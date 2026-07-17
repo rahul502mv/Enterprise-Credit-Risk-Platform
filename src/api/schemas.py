@@ -1,0 +1,18 @@
+from pydantic import BaseModel
+from typing import List
+
+
+class PredictionRequest(BaseModel):
+
+    features: List[float]
+
+
+class PredictionResponse(BaseModel):
+
+    prediction: int
+
+    probability: float
+
+    risk_category: str
+
+    recommendation: str
