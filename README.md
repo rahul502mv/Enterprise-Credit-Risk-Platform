@@ -1,6 +1,6 @@
 # 🚀 Enterprise AI-Powered Credit Risk Intelligence Platform
 
-An enterprise-grade Machine Learning platform that predicts customer loan default risk using the Home Credit Default Risk dataset. The platform combines **Machine Learning**, **FastAPI**, **Streamlit**, **Docker**, and **Render Cloud** to provide a production-style end-to-end credit risk prediction solution.
+An enterprise-grade Machine Learning application that predicts customer loan default risk using the Home Credit Default Risk dataset. This project demonstrates an end-to-end ML workflow including preprocessing, model training, REST API development, interactive dashboard creation, containerization, and cloud deployment.
 
 ---
 
@@ -8,49 +8,50 @@ An enterprise-grade Machine Learning platform that predicts customer loan defaul
 
 ## 📊 Streamlit Dashboard
 
-**Live Dashboard**
-
-https://enterprise-credit-risk-dashboard.onrender.com
+🔗 https://enterprise-credit-risk-dashboard.onrender.com
 
 ---
 
 ## ⚡ FastAPI REST API
 
-**Live API**
-
-https://enterprise-credit-risk-platform.onrender.com
+🔗 https://enterprise-credit-risk-platform.onrender.com
 
 ---
 
-## 📄 API Documentation (Swagger)
+## 📄 Swagger API Documentation
 
-https://enterprise-credit-risk-platform.onrender.com/docs
+🔗 https://enterprise-credit-risk-platform.onrender.com/docs
+
+---
+
+# 📷 Project Screenshot
+
+## Streamlit Dashboard
+
+![Dashboard](images/dashboard.png)
 
 ---
 
 # 📌 Project Overview
 
-Financial institutions face significant challenges in identifying customers who are likely to default on loans.
+This project helps financial institutions predict whether a customer is likely to default on a loan.
 
-This project uses Machine Learning to analyze customer information and predict the probability of loan default.
-
-The platform has been designed following enterprise software development practices and deployed on the cloud using Docker and Render.
+It follows enterprise software development practices and is deployed using Docker and Render Cloud.
 
 ---
 
 # ✨ Features
 
 - Loan Default Prediction
-- Credit Risk Classification
+- Credit Risk Analysis
+- CSV File Upload
+- Dataset Preview
+- Machine Learning Prediction
 - FastAPI REST API
 - Interactive Streamlit Dashboard
-- Data Preprocessing Pipeline
-- Feature Engineering
-- LightGBM Machine Learning Model
-- Explainable AI Ready (SHAP)
-- Dockerized Application
-- Cloud Deployment using Render
-- Production-style Project Structure
+- Docker Support
+- Cloud Deployment
+- Enterprise Project Structure
 
 ---
 
@@ -58,14 +59,14 @@ The platform has been designed following enterprise software development practic
 
 | Category | Technology |
 |-----------|------------|
-| Programming Language | Python |
+| Language | Python |
 | Machine Learning | LightGBM, Scikit-learn |
 | Data Processing | Pandas, NumPy |
-| Data Visualization | Matplotlib, Plotly |
 | API | FastAPI |
 | Dashboard | Streamlit |
+| Visualization | Plotly, Matplotlib |
 | Deployment | Docker, Render |
-| Version Control | Git & GitHub |
+| Version Control | Git, GitHub |
 
 ---
 
@@ -74,24 +75,24 @@ The platform has been designed following enterprise software development practic
 ```text
 Enterprise-Credit-Risk-Platform/
 │
+├── images/
+│   └── dashboard.png
+│
+├── notebooks/
+├── saved_models/
 ├── src/
 │   ├── api/
 │   ├── dashboard/
-│   ├── explainability/
 │   ├── models/
 │   ├── preprocessing/
 │   ├── recommendation/
 │   └── utils/
 │
-├── saved_models/
-├── notebooks/
 ├── tests/
-│
 ├── Dockerfile
 ├── Dockerfile.streamlit
 ├── docker-compose.yml
 ├── requirements.txt
-├── app.py
 └── README.md
 ```
 
@@ -105,7 +106,7 @@ Clone the repository
 git clone https://github.com/rahul502mv/Enterprise-Credit-Risk-Platform.git
 ```
 
-Go to project folder
+Go to project
 
 ```bash
 cd Enterprise-Credit-Risk-Platform
@@ -125,7 +126,7 @@ Windows
 .venv\Scripts\activate
 ```
 
-Install Dependencies
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -145,7 +146,7 @@ Open
 http://127.0.0.1:8000
 ```
 
-Swagger Documentation
+Swagger
 
 ```
 http://127.0.0.1:8000/docs
@@ -153,7 +154,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# ▶ Run Streamlit Dashboard
+# ▶ Run Streamlit
 
 ```bash
 streamlit run src/dashboard/streamlit_app.py
@@ -169,13 +170,13 @@ http://localhost:8501
 
 # 🐳 Docker
 
-Build Image
+Build
 
 ```bash
 docker build -t enterprise-credit-risk .
 ```
 
-Run Container
+Run
 
 ```bash
 docker run -p 8000:8000 enterprise-credit-risk
@@ -185,9 +186,9 @@ docker run -p 8000:8000 enterprise-credit-risk
 
 # 📊 Dataset
 
-Dataset Used
+Dataset:
 
-**Home Credit Default Risk**
+Home Credit Default Risk
 
 Target Variable
 
@@ -207,53 +208,45 @@ Prediction
 
 # 🚀 Deployment
 
-## FastAPI
+### Streamlit Dashboard
+
+https://enterprise-credit-risk-dashboard.onrender.com
+
+### FastAPI
 
 https://enterprise-credit-risk-platform.onrender.com
 
----
+### Swagger
 
-## Streamlit Dashboard
-
-https://enterprise-credit-risk-dashboard.onrender.com
+https://enterprise-credit-risk-platform.onrender.com/docs
 
 ---
 
 # 📈 Machine Learning Pipeline
 
 - Data Cleaning
-- Missing Value Handling
+- Missing Value Imputation
 - Feature Engineering
 - Feature Scaling
-- LightGBM Training
+- LightGBM Model
 - Prediction Pipeline
-- Risk Classification
-- Dashboard Visualization
-
----
-
-# 📷 Project Screenshots
-
-Add screenshots inside an `images/` folder.
-
-Example:
-
-```markdown
-![Dashboard](images/dashboard.png)
-```
+- REST API
+- Streamlit Dashboard
+- Docker Deployment
+- Cloud Deployment
 
 ---
 
 # 🎯 Future Improvements
 
-- SHAP Explainability Dashboard
-- MLflow Integration
-- Authentication System
+- SHAP Explainability
+- MLflow
+- Authentication
+- PDF Report
 - Prediction History
-- PDF Report Generation
 - CI/CD Pipeline
 - Kubernetes Deployment
-- AWS / Azure Deployment
+- AWS Deployment
 
 ---
 
@@ -267,20 +260,14 @@ GitHub
 
 https://github.com/rahul502mv
 
-LinkedIn
-
-(Add your LinkedIn profile URL here)
-
 ---
 
 # ⭐ Support
 
-If you found this project useful,
-
-Please consider giving this repository a ⭐ on GitHub.
+If you like this project, please give it a ⭐ on GitHub.
 
 ---
 
 # 📜 License
 
-This project is created for educational, portfolio, and research purposes.
+This project is created for educational, research, and portfolio purposes.
