@@ -1,56 +1,77 @@
 # 🚀 Enterprise AI-Powered Credit Risk Intelligence Platform
 
-An enterprise-grade Machine Learning platform that predicts loan default risk using the Home Credit Default Risk dataset. The application provides intelligent credit risk prediction through a FastAPI backend and an interactive Streamlit dashboard.
+An enterprise-grade Machine Learning platform that predicts customer loan default risk using the Home Credit Default Risk dataset. The platform combines **Machine Learning**, **FastAPI**, **Streamlit**, **Docker**, and **Render Cloud** to provide a production-style end-to-end credit risk prediction solution.
+
+---
+
+# 🌐 Live Demo
+
+## 📊 Streamlit Dashboard
+
+**Live Dashboard**
+
+https://enterprise-credit-risk-dashboard.onrender.com
+
+---
+
+## ⚡ FastAPI REST API
+
+**Live API**
+
+https://enterprise-credit-risk-platform.onrender.com
+
+---
+
+## 📄 API Documentation (Swagger)
+
+https://enterprise-credit-risk-platform.onrender.com/docs
 
 ---
 
 # 📌 Project Overview
 
-Financial institutions must accurately identify customers who are likely to default on loans. This project leverages Machine Learning to analyze customer information and generate credit risk predictions.
+Financial institutions face significant challenges in identifying customers who are likely to default on loans.
 
-The platform includes:
+This project uses Machine Learning to analyze customer information and predict the probability of loan default.
 
-- Loan Default Prediction
-- Risk Probability Score
-- Interactive Dashboard
-- REST API
-- Docker Support
-- Enterprise Project Structure
+The platform has been designed following enterprise software development practices and deployed on the cloud using Docker and Render.
 
 ---
 
 # ✨ Features
 
-- Predict customer loan default risk
+- Loan Default Prediction
+- Credit Risk Classification
 - FastAPI REST API
-- Streamlit Dashboard
+- Interactive Streamlit Dashboard
 - Data Preprocessing Pipeline
 - Feature Engineering
-- LightGBM Model
-- SHAP Explainability
-- Docker Deployment
-- Enterprise Folder Structure
+- LightGBM Machine Learning Model
+- Explainable AI Ready (SHAP)
+- Dockerized Application
+- Cloud Deployment using Render
+- Production-style Project Structure
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠 Technology Stack
 
 | Category | Technology |
 |-----------|------------|
-| Language | Python |
+| Programming Language | Python |
 | Machine Learning | LightGBM, Scikit-learn |
 | Data Processing | Pandas, NumPy |
-| Visualization | Matplotlib, Plotly |
+| Data Visualization | Matplotlib, Plotly |
 | API | FastAPI |
 | Dashboard | Streamlit |
-| Deployment | Docker |
+| Deployment | Docker, Render |
 | Version Control | Git & GitHub |
 
 ---
 
 # 📂 Project Structure
 
-```
+```text
 Enterprise-Credit-Risk-Platform/
 │
 ├── src/
@@ -62,9 +83,12 @@ Enterprise-Credit-Risk-Platform/
 │   ├── recommendation/
 │   └── utils/
 │
+├── saved_models/
 ├── notebooks/
 ├── tests/
+│
 ├── Dockerfile
+├── Dockerfile.streamlit
 ├── docker-compose.yml
 ├── requirements.txt
 ├── app.py
@@ -73,7 +97,7 @@ Enterprise-Credit-Risk-Platform/
 
 ---
 
-# ⚙️ Installation
+# ⚙ Installation
 
 Clone the repository
 
@@ -81,19 +105,19 @@ Clone the repository
 git clone https://github.com/rahul502mv/Enterprise-Credit-Risk-Platform.git
 ```
 
-Go into the project
+Go to project folder
 
 ```bash
 cd Enterprise-Credit-Risk-Platform
 ```
 
-Create a virtual environment
+Create Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-Activate it
+Activate Environment
 
 Windows
 
@@ -101,7 +125,7 @@ Windows
 .venv\Scripts\activate
 ```
 
-Install dependencies
+Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -109,19 +133,19 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Run FastAPI
+# ▶ Run FastAPI
 
 ```bash
 uvicorn src.api.main:app --reload
 ```
 
-API:
+Open
 
 ```
 http://127.0.0.1:8000
 ```
 
-Swagger UI:
+Swagger Documentation
 
 ```
 http://127.0.0.1:8000/docs
@@ -129,13 +153,13 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# ▶️ Run Streamlit
+# ▶ Run Streamlit Dashboard
 
 ```bash
 streamlit run src/dashboard/streamlit_app.py
 ```
 
-Dashboard:
+Open
 
 ```
 http://localhost:8501
@@ -145,33 +169,33 @@ http://localhost:8501
 
 # 🐳 Docker
 
-Build
+Build Image
 
 ```bash
-docker build -t credit-risk-platform .
+docker build -t enterprise-credit-risk .
 ```
 
-Run
+Run Container
 
 ```bash
-docker run -p 8000:8000 credit-risk-platform
+docker run -p 8000:8000 enterprise-credit-risk
 ```
 
 ---
 
 # 📊 Dataset
 
-Dataset:
+Dataset Used
 
-Home Credit Default Risk
+**Home Credit Default Risk**
 
-Target Variable:
+Target Variable
 
 ```
 TARGET
 ```
 
-Prediction:
+Prediction
 
 ```
 0 → Non Default
@@ -181,14 +205,55 @@ Prediction:
 
 ---
 
+# 🚀 Deployment
+
+## FastAPI
+
+https://enterprise-credit-risk-platform.onrender.com
+
+---
+
+## Streamlit Dashboard
+
+https://enterprise-credit-risk-dashboard.onrender.com
+
+---
+
+# 📈 Machine Learning Pipeline
+
+- Data Cleaning
+- Missing Value Handling
+- Feature Engineering
+- Feature Scaling
+- LightGBM Training
+- Prediction Pipeline
+- Risk Classification
+- Dashboard Visualization
+
+---
+
+# 📷 Project Screenshots
+
+Add screenshots inside an `images/` folder.
+
+Example:
+
+```markdown
+![Dashboard](images/dashboard.png)
+```
+
+---
+
 # 🎯 Future Improvements
 
-- Model Monitoring
+- SHAP Explainability Dashboard
 - MLflow Integration
+- Authentication System
+- Prediction History
+- PDF Report Generation
 - CI/CD Pipeline
-- Cloud Deployment
-- Authentication
-- Model Versioning
+- Kubernetes Deployment
+- AWS / Azure Deployment
 
 ---
 
@@ -198,12 +263,24 @@ Prediction:
 
 Aspiring Data Scientist
 
-GitHub:
+GitHub
 
 https://github.com/rahul502mv
 
+LinkedIn
+
+(Add your LinkedIn profile URL here)
+
 ---
 
-# ⭐ If you like this project
+# ⭐ Support
 
-Please consider giving this repository a ⭐
+If you found this project useful,
+
+Please consider giving this repository a ⭐ on GitHub.
+
+---
+
+# 📜 License
+
+This project is created for educational, portfolio, and research purposes.
