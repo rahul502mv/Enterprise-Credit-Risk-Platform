@@ -1,0 +1,54 @@
+# ==========================================
+# Streamlit Docker Image
+# ==========================================
+
+FROM python:3.11-slim
+
+# ------------------------------------------
+# Working Directory
+# ------------------------------------------
+
+WORKDIR /app
+
+# ------------------------------------------
+# Linux Dependencies
+# ------------------------------------------
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    libgomp1 && \
+    rm -rf /var/lib/apt/lists/*
+
+# ------------------------------------------
+# Python Path
+# ------------------------------------------
+
+ENV PYTHONPATH=/app
+
+# ------------------------------------------
+# Install Dependencies
+# ------------------------------------------
+
+COPY requirements.txt .
+
+RUN pip install --upgrade pip
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ------------------------------------------
+# Copy Project
+# ------------------------------------------
+
+COPY . .
+
+# ------------------------------------------
+# Streamlit Port
+# ------------------------------------------
+
+EXPOSE 10000
+
+# ------------------------------------------
+# Start Streamlit
+# ------------------------------------------
+
+CMD ["python", "-m", "streamlit", "run", "src/dashboard/streamlit_app.py", "--server.address=0.0.0.0", "--server.port=10000"]
